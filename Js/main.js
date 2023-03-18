@@ -666,4 +666,21 @@ ${temp}
 }
 $("#Home").click(()=>{
     GetData()
+    $(".Search-container").addClass("d-none")
+    $(".Instructions").addClass("d-none")
+})
+
+console.log($(".Navbarx").outerWidth(true))
+$(".Navbarx").outerWidth(true)
+
+document.addEventListener("click",()=>{
+    let leftx = $("nav").css("left")
+    let width=$("navHeader").css("left")
+    if (leftx == "0px") {
+        $(".loading-screen").animate({ left: `${width}px` }, 500)
+    }
+    else {
+        let width=$(".navHeader").outerWidth(true)
+        $(".loading-screen").css({left:`${width}px`})
+    }
 })
