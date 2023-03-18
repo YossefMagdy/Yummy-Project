@@ -579,9 +579,9 @@ function GetSearch() {
 
 async function SearchByName(x) {
    
-        let res = await fetch(`http://www.themealdb.com/api/json/v1/1/search.php?s=${x}`)
-        res = await res.json()
-        res = res.meals
+        let res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${x}`);
+        res = await res.json();
+        res = res.meals;
         DisplaySearchByName(res)
      
 }
